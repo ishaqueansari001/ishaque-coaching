@@ -1,0 +1,51 @@
+<footer class="footer">
+		<div class="footer-bottom-sec">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 copy-right">
+						<p> &copy; 2023 All Rights Reserved. </p>
+					</div>
+				
+					<div class="col-md-5 copy-right">
+						<div class="footer_title">
+							<p>Powered by ishaque&nbsp;&nbsp; </p>
+							<a href="https://www.abcdesigns.in" target="_blank">
+								<div class="company_logo" data-toggle="tooltip" title=""
+									data-original-title="ABC Designs"> </div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	
+	
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/custom.js"></script>
+	<script type="text/javascript" src="/js/maplace.js"></script>
+<script>
+	// Carousel
+	$('.carousel').carousel({
+		interval: 4000, //changes the speed
+		pause: "false"
+	})
+</script>
+<script>
+$(document).ready(function(){
+    $('ul.navbar-nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+    });  
+});
+</script>
+<script>
+/*creating click event*/
+	$(document).ready(function(){
+		$('a#click-a').click(function(){
+			$('.navbar').toggleClass('nav-view');
+		});
+	});
+</script>

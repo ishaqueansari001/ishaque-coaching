@@ -1,0 +1,68 @@
+<body>
+
+	<div class="head_patch">
+		<a href="#" id="click-a"><i class="fa fa-bars"></i> MENU</a>
+		<p class="text-right">
+			Call Us : <a href="tel:9028223317"> 9028223317 </a>
+		</p>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-fixed-top">
+		<a href="#" id="click-a" class="close_menu"><i class="fa fa-times" aria-hidden="true"></i> </a>
+		<div class="container">
+			<a class="navbar-brand logo" href="/">
+				<img th:src="@{/images/log.png}" class="img-fluid mx-auto d-block" style="height: 80px; width:300px;" />
+			</a>
+			<div class="navbar-collapse" id="navbarResponsive">
+				<div class="top_menu">
+					<ul>
+						
+						<li>
+							<a href="/events" class=""></a>
+						</li>
+						<li>
+							<a href="/career" class=""></a>
+						</li>
+						<li><a style="padding-left: 150px;" href="/"> Home </a></li>
+					</ul>
+					<ul class="call_us">
+						<li>
+							Call Us : <a href="tel:9028223317"> 9028223317 </a>
+						</li>
+					</ul>
+				</div>
+				<ul class="navbar-nav ml-auto">
+					<li class="res_men"><a href="#"> Home </a></li>
+					<li><a href="/about-us" class="">About Us</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Courses</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a href="/courses/java" class="">JAVA</a>
+							<a href="/courses/DevOps" class="">DevOps</a>
+							<a href="/courses/kafka" class="">KAFKA</a>
+						</div>
+					</li>					
+				<!--	<li><a href="/gallery" class="">Gallery</a></li>
+					<li class="res_men">
+						<a href="/events" class="">News &amp; Events </a>
+					</li>
+					<li class="res_men">
+						<a href="/career" class="">Career</a>
+					</li>
+					<li><a href="/branches" class="">Branches</a></li>
+					<li><a href="/contact-us" class="">Contact Us</a></li>
+-->
+					<li><a href="/signup_form" class="online_add"> Online Admission </a></li>
+					<!--<li><a href="/ssc-cet/login" class="online_add"> SSC-CET Login </a></li> -->
+
+					<li th:if="${#authentication == null}"><a class="online_add" href="/login">login</a></li>
+					<li th:if="${#authentication != null}">><a class="online_add" href="/logout">logout</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Slider Section Start -->
+
+
+</body>

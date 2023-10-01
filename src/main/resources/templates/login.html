@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<include th:insert="fragments/include" />
+
+<body>
+
+	<header th:insert="fragments/header" />
+
+
+	<div class="inner_banner">
+		<img th:src="@{/images/login_banner.jpeg}" class="img-fluid mx-auto d-block lg_img" alt="" />
+		<img th:src="@{/images/login_banner.jpeg}" class="img-fluid mx-auto d-block sm_img" alt="" />
+	</div>
+
+
+	<div class="breadcrumb_bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"> <a href="/"><i class="fa fa-home"></i></a> </li>
+						<li class="breadcrumb-item"> Login </li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="online-addmission" class="login_page">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="text-center"> Login </h2>
+					<div class="title-border"><span></span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-4 mb-4">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col-xl-4 col-lg-6 col-md-8">
+
+						<div th:if="${param.error}">
+							<div class="alert alert-danger">Invalid Email or Password</div>
+						</div>
+						<div th:if="${param.logout}">
+							<div class="alert alert-success"> You have been logged out.</div>
+						</div>
+
+						<div class="card">
+							<div id="form">
+								<form class="member_case" id="StudentLoginForm" method="post" role="form"
+									th:action="@{/login}" accept-charset="utf-8">
+									
+									<div class="form-group required"><label for="StudentEmailAddress">Email
+											Address</label><input name="username"
+											class="form-control" placeholder="Email Address" maxlength="250" type="text"
+											id="username" required="required" /></div>
+									<div class="form-group"><label for="StudentPassword">Password</label><input
+											name="password" class="form-control" placeholder="Password"
+											type="password" id="password" /></div> <input type="hidden"
+										name="data[Student][share_ip]" value="">
+								
+									<div class="submit">
+										<input class="btn primary btn-block p-x-md"
+											title="Click here to LogIn!" id="login_submit" type="submit"
+											value="Login" />
+									</div>
+								</form>
+								<br />
+
+								<p class="by_signing"> Don't have an account <a href="/admission/online"> <u> Signup
+											here </u></a> </p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<header th:insert="fragments/footer" />
+
+</body>
+
+</html>

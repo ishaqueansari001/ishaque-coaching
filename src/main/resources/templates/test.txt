@@ -1,0 +1,169 @@
+
+						
+							"itemName":"Introduction to Java",
+							"itemList":[
+
+							
+								"Introduction to computer languages?",
+								"Need of computer languages",
+								"Java&nbsp; V/S other languagesPlatform dependencies?",
+								"Introduction to Java?",
+								"History of JavaJDK software includes…",
+								"Platform Independency?",
+								"Structure of Java-application?"
+							
+
+						
+
+						
+							],"itemName":"Introduction to Variable, Blocks and
+								Methods?"
+
+							
+								"Introduction to variables and identifiers",
+								"Type of variables",
+								"Memory construction and destruction of variables",
+								"Rules to create variables",
+								"Naming conventions of variables",
+								"Blocks introduction",
+								"Methods introduction.",
+
+							</ul>
+
+						
+
+						
+							],"itemName":"Data types"
+
+							
+								"Primitive types",
+								"Reference types",
+								"Operators
+								"
+								"Control Statements",
+							</ul>
+
+
+						
+						
+							],"itemName":"Methods"
+
+							
+								"Introduction",
+								"Need",
+								"Classification of functions",
+							</ul>
+
+						
+
+						
+							],"itemName":"First java application?"
+
+							
+								"Class keyword and its naming convention",
+								"Class naming convention",
+								"Why main has public access",
+								"Why main has static modifier",
+								"Why return type is void",
+								"System.out.println() description",
+								"Naming convention of methods and packages.",
+								"Overloading main method",
+
+							</ul>
+
+						
+
+						
+							],"itemName":"Class members in java<< /strong>
+									
+										"Static members(class level)",
+										"Non-static members(object level)",
+									</ul>
+
+						
+
+						
+							],"itemName":"Wrapper classes<< /strong>
+									
+										"Introduction",
+										"Why wrapping",
+										"Boxing and Unboxing",
+										"Auto Boxing and Auto Unboxing",
+										"Primitive to String conversion (using valueOf()and toString() methods)",
+										"String to Primitive conversion (using valueOf() and xxxValue() methods)",
+
+									</ul>
+
+						
+						
+							],"itemName":"Access Modifiers Introduction"
+
+							
+								"Usage of access modifiers in packages",
+							</ul>
+
+						
+						
+							],"itemName":"Packages"
+							
+								"Introduction",
+								"How to create user defined package",
+								"Calling members of same package",
+								"Calling members of another package",
+								"Need of&nbsp; import statement",
+								"Need of fully qualified name",
+								"Difference between import and include",
+								"Creating Sub packages",
+								"Importing sub packages",
+
+							</ul>
+
+						
+						
+							],"itemName":"Command Line Argument"
+
+							
+								"Introduction",
+								"Advantage and disadvantages",
+								"parseXxx methods",
+								"Scanner class",
+								"Random class",
+
+							</ul>
+
+						
+						
+							],"itemName":"Spring"
+
+							
+								"Introduction",
+								"Container, Dependency, and IOC",
+								"Dependency Management",
+								"Spring MVC",
+								"Mavent builds",
+
+							</ul>
+
+						
+						
+							],"itemName":"Spring Boot"
+
+							
+								"Introduction",
+								"REST services",
+								"Micro Services",
+
+							</ul>
+
+						
+						
+							],"itemName":"SQL/NoSQL"
+
+							
+								"Introduction to SQL",
+								"Introduction to NoSQL MongoDB",
+							</ul>
+
+						
+					
+		

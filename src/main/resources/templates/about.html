@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<include th:insert="fragments/include" />
+</head>
+
+<body >
+	
+	<header th:insert="fragments/header" />
+	
+	
+	<div class="inner_banner">
+		<img th:src="@{/images/about-us.jpeg}" class="img-fluid mx-auto d-block lg_img" alt="" />
+		<img th:src="@{/images/about-us_sm.jpeg}" class="img-fluid mx-auto d-block sm_img" alt="" />
+	</div>
+	<div class="breadcrumb_bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"> <a href="/"><i class="fa fa-home"></i></a> </li>
+						<li class="breadcrumb-item active"> About Us </li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section id="about-us">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="text-center">About Us</h2>
+					<div class="title-border"><span></span></div>
+				</div>
+			</div>
+			<div class="row">
+					
+					
+					<div class="col-6 col-lg-4 card-padding">
+						<div class="card m-0" style="background: #8f71ff;
+                  color: #8bffff;">
+                  	<div class="img-container">
+									
+								</div>
+							<div class="card-body card-padding" style="padding-left: 10%;">
+							<img th:src="@{/images/shaikh_i.jpg}" alt="" class="card-img-top" style=" width: 250px;
+                           height: 250px;
+                           object-fit: cover;
+                           border-radius: 50%;
+                           ">
+								<h3 class="card-title mbr-section-subtitle mbr-fonts-style display-5">
+									<strong><span>Shaikh Ishaque</span> </strong>
+								</h3>
+								<h4 class="mbr-section-subtitle title2 mbr-fonts-style display-5">
+									DevOps Lead
+								</h4>
+								<h6>
+									6+ years of Experience in DevOps with Kubernetest, Jenkins etc
+								</h6>
+								<h6>mobile: 9028223317</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-lg-4" >
+
+						<div class="card m-0" style=" background: #B83B5E;
+                  color: #FD81A4;">
+							<div class="card-body" style="padding-left: 10%;">
+
+
+								<div class="img-container mb-3">
+									<img th:src="@{/images/ishaque_2.png}" alt="" class="card-img-top" style=" width: 250px;
+                           height: 250px;
+                           object-fit: cover;
+                           border-radius: 50%;">
+								</div>
+								<h3 class="card-title mbr-section-subtitle mbr-fonts-style display-5">
+									<strong>Mohammed Ishaque </strong>
+								</h3>
+								<h4 class="mbr-section-subtitle title2 mbr-fonts-style display-5">
+									Java Lead
+								</h4>
+								<h6>
+									8+ years of Experience in JAVA, Spring BOOT, MicroServices
+								</h6>
+								<h6>mobile: 9028223317</h6>
+
+
+
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-lg-4">
+						<div class="card m-0" style="background: #8f71ff;
+                  color: #8bffff;">
+							<div class="card-body" style="padding-left: 10%;">
+								<div class="img-container mb-3">
+									<img th:src="@{/images/junaid.jpeg}" alt="" class="card-img-top" style="width: 250px;
+                           height: 250px;
+                           object-fit: cover;
+                           border-radius: 50%;">
+								</div>
+								<h3 class="card-title mbr-section-subtitle mbr-fonts-style display-5">
+									<strong><span> Junaid Khan</span> </strong>
+								</h3>
+								<h4 class="mbr-section-subtitle title2 mbr-fonts-style display-5">
+									Kafka Lead
+								</h4>
+								<h6>
+									6+ years of Experience in Kafka & DevOps
+								</h6>
+								<h6>mobile: 9028223317</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			<!-- hieghlights-->
+
+	</section>
+
+
+
+	<section id="highlights">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h3>Highlights</h3>
+					<div class="title-border mb-5"><span></span></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<img th:src="@{/images/expert.jpeg}" class="img-fluid mx-auto d-block" alt="" style="width: 100%;
+    height: 15vw;
+    object-fit: cover;" />
+
+						<div class="card-body">
+							<div>
+								<h5>Real-Time Experts as Trainers </h5>
+								<p>You will Learn from the Experts from industry who are
+									Passionate in sharing their Knowledge with Learners. Get Personally Mentored
+									by the Experts.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card">
+						<img th:src="@{/images/project.jpeg}" class="img-fluid mx-auto d-block" alt="" style="width: 100%;
+    height: 15vw;
+    object-fit: cover;" />
+
+						<div class="card-body">
+							<div>
+								<h5>LIVE Project </h5>
+								<p>Get an Opportunity to work in Real-time Projects that will give you a Deep
+									Experience. Showcase your Project Experience & Increase chance of
+									getting Hired!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4">
+					<div class="card">
+						<img th:src="@{/images/affordable.jpeg}" class="img-fluid mx-auto d-block" alt="" style="width: 100%;
+    height: 15vw;
+    object-fit: cover;" />
+
+						<div class="card-body">
+							<div>
+								<h5>Affordable Fees</h5>
+								<p>Course Fee is not only Affordable, but you have the optionto
+									pay it in Installments. Quality Training at an Affordable Price is our
+									Motto.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card">
+						<img th:src="@{/images/certification.png}" class="img-fluid mx-auto d-block" alt="" style="width: 100%;
+    height: 15vw;
+    object-fit: cover;" />
+
+						<div class="card-body">
+							<div>
+								<h5>Certification</h5>
+								<p> Also get Help with Certifications.
+									With Our guidance you will be able to clear the certifcation easilty </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card">
+						<img th:src="@{/images/flexibility.jpeg}" class="img-fluid mx-auto d-block" alt="" style="width: 100%;
+    height: 15vw;
+    object-fit: cover;" />
+
+						<div class=" card-body">
+							<div>
+								<h5>Flexibility</h5>
+								<p> Get Ultimate Flexibility, Classroom or Online Training?
+									Early morning or Late evenings? Weekdays or Weekends? Regular Pace or Fast
+									Track? - Pick whatever suits you the Best.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card">
+						<img th:src="@{/images/cutting_edge.jpeg}" class="img-fluid mx-auto d-block" alt="" style="width: 100%;
+    height: 15vw;
+    object-fit: cover;" />
+
+						<div class="card-body">
+							<div>
+								<h5>Placement Support</h5>
+								<p>Tie-up & MOU with more than 1500+ Small & Medium Companies to Support you
+									with
+									Opportunities to Kick-Start & Step-up your Career. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+		</div>
+		</div>
+		<!--
+            <ul class="list-unstyled">
+            	<li>25 successful years in the field of education</li>
+            	<li>We have accomplished an astonishing growth from mere 16 students to thousands of students over the years.</li>
+            	<li>There are in all 12 branches of SARASWATI COACHING CLASSES covering Marathi &amp; English medium of school section &amp; science, commerce & professional courses streams of college section.</li>
+            	<li>We have a staff of more than 200 people including teaching &amp; non-teaching members.</li>
+            	<li>We conduct about 3500 lectures per week at all our branches.</li>
+            	<li>We have been producing S.S.C. merit rankers since 1997.</li>
+            </ul>
+            -->
+	</section>
+
+
+<header th:insert="fragments/footer" />
+	
+
+</body>
+
+</html>

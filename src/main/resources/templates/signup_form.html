@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Sign Up - Ishaque Coacing</title>
-	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+	<include th:insert="fragments/include" />
+
 </head>
+
 <body>
-	<div class="container text-center">
+	<header th:insert="fragments/header" />
+
+	<!--	<div class="container text-center">
 		<div>
 			<h1>Candidate Registration - Sign Up</h1>
 		</div>
@@ -52,5 +56,242 @@
 		</div>
 		</form>
 	</div>
+	
+	
+	
+	
+	-->
+	<div class="inner_banner">
+		<img th:src="@{/images/login_banner.jpeg}" class="img-fluid mx-auto d-block lg_img" alt="" />
+		<img th:src="@{/images/login_banner.jpeg}" class="img-fluid mx-auto d-block sm_img" alt="" />
+	</div>
+
+
+	<div class="breadcrumb_bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"> <a href="/"><i class="fa fa-home"></i></a> </li>
+						<li class="breadcrumb-item active"> Online Admission </li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="online-addmission">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="text-center"> Online Admission October-2023</h2>
+					<div class="title-border"><span></span></div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="mt-4 mb-4">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col-xl-8 col-lg-10">
+						<div class="card">
+							<div id="form">
+								<form th:action="@{/signup_form}" th:object="${student}" class="new_form"
+									enctype="multipart/form-data" method="post" accept-charset="utf-8">
+									<div style="display:none;"><input type="hidden" name="_method" value="POST" /></div>
+
+									<div th:if="${fields !=null && fields.hasErrors()}">
+
+										<ul>
+											<li th:each="err : ${fields.getAllErrors()}" th:text="${err.defaultMessage}"
+												class="text-danger" />
+										</ul>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 col-xs-12 form-item required">
+											<p class="formLabel">Student Name</p><input
+												name="data[Admission][stud_name]" class="form-style" maxlength="255"
+												type="text" th:field="*{name}" required="required" />
+										</div>
+										<div class="col-sm-6 col-xs-12 form-item required">
+											<p class="formLabel">Std.</p><select name="data[Admission][standard]"
+												class="form-style" id="course" th:field="*{course}" required="required">
+												<option value="">Select Course</option>
+												<option value="JAVA">JAVA</option>
+												<option value="DevOps">DevOps</option>
+												<option value="Kafka">Kafka</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 form-item">
+
+											<input type="radio" name="data[Admission][medium]" id="EnglishMedium"
+												value="English" class="cust-radio" th:field="*{medium}"
+												required="required" /><label for="EnglishMedium"
+												class="lbl-radio">English
+												Medium</label>
+											<input type="radio" name="data[Admission][medium]" id="UrduMedium"
+												value="Urdu" class="cust-radio" th:field="*{medium}"
+												required="required" /><label for="UrduMedium" class="lbl-radio">Urdu
+												Medium</label>
+											<input type="radio" name="data[Admission][medium]" id="Marathi"
+												value="MarathiMedium" class="cust-radio" th:field="*{medium}"
+												required="required" /><label for="MarathiMedium"
+												class="lbl-radio">Marathi Medium</label>
+											</br>
+											<input type="radio" name="data[Admission][medium]" id="semiEnglish"
+												value="SemiEnglish" class="cust-radio" th:field="*{medium}"
+												required="required" /><label for="semiEnglish" class="lbl-radio">Semi
+												English</label>
+
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-12 form-item">
+											<p class="formLabel">Degree Name</p><input name="data[Admission][school]"
+												class="form-style" maxlength="255" th:field="*{degreeName}" type="text"
+												id="AdmissionSchool" required="required" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 form-item">
+											<p class="formLabel">Degree Complete Year</p><input
+												name="data[Admission][school]" class="form-style" maxlength="255"
+												type="text" id="AdmissionSchool" th:field="*{degreeCompleteYear}"
+												required="required" />
+										</div>
+									</div>
+
+
+
+									<div class="row">
+										<div class="col-sm-6 col-xs-12 form-item required">
+											<p class="formLabel">Mobile No.</p><input name="data[Admission][contact]"
+												th:field="*{mobile}" class="form-style" maxlength="10" type="text"
+												id="AdmissionContact" required="required" />
+
+										</div>
+
+										<div class="col-sm-6 col-xs-12 form-item required">
+											<p class="formLabel">Email ID.</p><input
+												name="data[Admission][email_address]" class="form-style" maxlength="255"
+												type="text" id="email" th:field="*{email}" required="required"
+												onkeyup="validate_email()" />
+											<span id="wrong_email_alert"></span>
+
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-6 col-xs-12 form-item required">
+											<p class="formLabel">Password</p><input name="data[Admission][contact]"
+												class="form-style" maxlength="20" type="text" id="pass"
+												th:field="*{password}" required="required" />
+										</div>
+										<div class="col-sm-6 col-xs-12 form-item required">
+											<p class="formLabel">confirm Password</p><input
+												name="data[Admission][email_address]" class="form-style" maxlength="20"
+												type="text" id="confirm_pass" th:field="*{confirmPassword}"
+												onkeyup="validate_password()" />
+										</div>
+										<span id="wrong_pass_alert"></span>
+									</div>
+
+									<div class="row">
+										<div class="col-md-12 form-item">
+											<p class="formLabel">Address(Res)</p><input name="data[Admission][address]"
+												class="form-style" maxlength="255" type="text" id="AdmissionAddress"
+												th:field="*{address}" required="required" />
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-12 form-item">
+											<p class="formLabel">please provide details which technology you are already
+												aware</p><input name="data[Admission][current_coaching_class]"
+												class="form-style" maxlength="255" type="text"
+												id="AdmissionCurrentCoachingClass" th:field="*{techDetais}"
+												required="required" />
+										</div>
+									</div>
+									<!--				<div class="form-group required">
+										<div class="g-recaptcha" data-sitekey="6LeGG-gUAAAAADnueo2LFAgKrMjWgJA_yL19P23b"
+											required="required"></div>
+									</div>
+									<script src="https://www.google.com/recaptcha/api.js" async defer></script
+						-->
+									<div class="form-item">
+										<div class="submit"><input class="form-btn" id="submit" type="submit"
+												value="Submit" />
+										</div>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script>
+			function validate_email() {
+
+				var email = document.getElementById('email').value;
+				var validRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+
+				if (!email.match(validRegex)) {
+					document.getElementById('wrong_email_alert').style.color = 'red';
+					document.getElementById('wrong_email_alert').innerHTML
+						= '☒ Please use correct email';
+					document.getElementById('submit').disabled = true;
+					document.getElementById('submit').style.opacity = (0.4);
+				} else {
+					document.getElementById('wrong_email_alert').style.color = 'green';
+					document.getElementById('wrong_email_alert').innerHTML =
+						'🗹 Email is valid';
+					document.getElementById('submit').disabled = false;
+					document.getElementById('submit').style.opacity = (1);
+				}
+			}
+
+			function validate_password() {
+
+				var pass = document.getElementById('pass').value;
+				var confirm_pass = document.getElementById('confirm_pass').value;
+				if (pass != confirm_pass) {
+					document.getElementById('wrong_pass_alert').style.color = 'red';
+					document.getElementById('wrong_pass_alert').innerHTML
+						= '☒ Use same password';
+					document.getElementById('submit').disabled = true;
+					document.getElementById('submit').style.opacity = (0.4);
+				} else {
+					document.getElementById('wrong_pass_alert').style.color = 'green';
+					document.getElementById('wrong_pass_alert').innerHTML =
+						'🗹 Password Matched';
+					document.getElementById('submit').disabled = false;
+					document.getElementById('submit').style.opacity = (1);
+				}
+			}
+
+			function wrong_pass_alert() {
+				if (document.getElementById('pass').value != "" &&
+					document.getElementById('confirm_pass').value != "") {
+					alert("Your response is submitted");
+				} else {
+					alert("Please fill all the fields");
+				}
+			}
+		</script>
+	</section>
+	<header th:insert="fragments/footer" />
+
+
 </body>
+
+
 </html>

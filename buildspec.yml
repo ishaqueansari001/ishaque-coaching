@@ -1,8 +1,4 @@
 version: 0.2
-env:
-  variables:
-    DOCKER_USERNAME: "ishaqhsa"
-    DOCKER_PASSWORD: "Abdul123@"
 phases:
   install:
     commands:
@@ -19,9 +15,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Building Docker image
-      - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
       - docker build -t ishaqsha/coach:latest .
-      - docker run -d -p 8080:8080 ishaqsha/coach:latest
+    
 artifacts:
   files:
     #- target/Devops-1.0.0.war
